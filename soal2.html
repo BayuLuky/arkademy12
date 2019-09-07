@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function is_username_valid(username){
+            var user = new RegExp("^(?=.*[a-z])(?!.*[A-Z])(?!.*[0-9])(?!.*[!@#\$%\^&\*])(?=.{5,9})");
+            return user.test(username);
+        }
+
+        function is_password_valid(password){
+            var pass = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+            return pass.test(password);
+        }
+
+        console.log(is_username_valid('cod3r'));
+        console.log(is_username_valid('siska'));
+        console.log(is_password_valid('p4s$gW'));
+        console.log(is_password_valid('codeYourFuture!123'));
+
+    </script>
+</body>
+</html>

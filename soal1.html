@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+      function getBio(){
+        return{
+          name : "Bayu Luky Istanto",
+          address : "Jl. Simo Kalangan 1/120",
+          age : 23 ,
+          hobbies: ["Futsal","Gaming"],
+          is_married: false,
+          list_school: {
+            name: "PENS",
+            year_in: 2014,
+            year_out: 2018,
+            major: "Teknologi Game"
+          },
+          skills:[{
+            name: "UX Researcher",
+            level: "Beginner"
+          },{
+            name: "Programming",
+            level: "Beginner"
+          }],
+          interest_in_coding: true
+        }
+      }
+      
+      let bio = getBio();
+
+      let skills = bio.skills;
+
+      let name_school = bio.list_school.name;
+
+      console.log(JSON.stringify(name_school));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <script>
+        function groupNumber(bil){
+        var nonspace = bil.replace(/ /g,'');
+        var bilangan = nonspace.replace(/-/g,'');
+        
+        var	number_string = bilangan,
+        sisa 	= number_string.length % 3,
+        rupiah 	= number_string.substr(number_string.length - sisa),
+        reverse = rupiah.split('').reverse().join('');
+
+        if (sisa!=1){
+            ribuan 	= number_string.match(/.{1,3}/g);
+            ribuan  = ribuan.join('-').split('').join('');
+        }else{ 
+            ribuan 	= number_string.match(/.{1,3}/g);
+            var panjang = (ribuan.length);
+            var arrayke2terakhir = ribuan[panjang-2];
+            var nilaibaruarrayke2terakhir = arrayke2terakhir.substring(0,2);
+            ribuan[panjang-2] = nilaibaruarrayke2terakhir;
+
+            var arrayterakhir = ribuan[panjang-1];
+            var nilaibaruarrayke2terakhirsisa = arrayke2terakhir.substring(2);
+            var arrayterakhirbaru = nilaibaruarrayke2terakhirsisa + arrayterakhir;
+            ribuan[panjang-1] = arrayterakhirbaru;
+            ribuan = ribuan.join('-').split('').join('');
+        }
+        return ribuan;
+    }
+
+    console.log(groupNumber("993141 -1 1323 14-232"));
+        
+    </script>
+</body>
+</html>
