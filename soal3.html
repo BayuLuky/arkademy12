@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<pre>
+<script type="text/javascript">
+function printTriangel(bil){
+
+    var i=0,j=0,bil;
+    for (i=bil;i>=0;i--){
+        for(j=0;j<bil-i;j++){
+            document.write(" ");
+        }
+        for(j=0;j<2*i-1;j++){
+            if(i==0 || i==bil){
+                document.write("*");
+            }
+            else if(j==0 || j == 2*i-2){
+                document.write("*");
+            }
+            else{
+                document.write(" ");
+            }
+        }
+            document.write("\n");
+    }
+}
+console.log(printTriangel(5));
+
+</script>
+</pre>
+</body>
+</html>
