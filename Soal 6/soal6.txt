@@ -1,2 +1,2 @@
 Soal no 6. query
-SELECT name.name, work.name, salary.salary from (name LEFT JOIN work on name.id_salary = work.id_salary) LEFT JOIN salary ON salary.id = work.id
+SELECT name.name, work.name_work, salary.salary from (name LEFT JOIN work on name.id_salary = work.id_salary) LEFT JOIN salary ON salary.id = work.id
